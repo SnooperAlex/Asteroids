@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 1451607309}
   - component: {fileID: 1451607308}
   - component: {fileID: 1451607310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,8 +452,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -500,4 +500,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5800bca8a76d2949b97859601c74034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4249401714346319195, guid: 9925954d91bbc53498bce9ff7c7f2113, type: 3}
   speed: 10
