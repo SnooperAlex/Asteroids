@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Bullet bulletPrefab;
     
     public float speed = 10f;
-    private float turnSpeed = 1.0f;
+    private float turnSpeed = 2.0f;
     Rigidbody2D rb;
 
     void Start()
