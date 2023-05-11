@@ -54,8 +54,21 @@ public class SnowflakeDisplay : MonoBehaviour
         if (col.gameObject.tag == "Bullet")
         {
             ScoreManager.Score(1);
+            if(ScoreManager.value >= 5)
+            {
+                UnlockAchievment("0001");
+            }
             Destroy(gameObject);
             Destroy(col.gameObject);
+        }
+    }
+    
+    private void UnlockAchievment(string ID)
+    {
+        AchievmentService achServ = FindObjectOfType<AchievmentService>();
+        if (achServ)
+        {
+            achServ.GetComponent<AchievmentService>().UnlockAchievment(ID);
         }
     }
 }
