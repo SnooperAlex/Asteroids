@@ -12,8 +12,8 @@ public class AchievmentService : MonoBehaviour
         abstractAchievment = GetComponent<IAchievment>();
     }
 
-    public void UnlockAchievment(string ID)
+    public void UnlockAchievment(AchievmentsObject achievment)
     {
-        abstractAchievment.UnlockAchievment(ID);
+        abstractAchievment.UnlockAchievment(achievment);
     }
 }

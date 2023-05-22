@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Snowflake", menuName = "Snowflake")]
 public class Snowflake : ScriptableObject
 {
+   public GameObject[] powerUpList;
    public new string name;
 
    public int speed;

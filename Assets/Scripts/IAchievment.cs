@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IAchievment
 {
-    void UnlockAchievment(string ID);
+    void UnlockAchievment(AchievmentsObject achievment);
 }

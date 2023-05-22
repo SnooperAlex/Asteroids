@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 
 public class SnowflakeDisplay : MonoBehaviour
 {
+    public PlayerMovement player;
+    public AchievmentsObject achievment1;
+
     public TextMeshPro text;
     
     public Snowflake snowf;
@@ -54,21 +58,39 @@ public class SnowflakeDisplay : MonoBehaviour
         if (col.gameObject.tag == "Bullet")
         {
             ScoreManager.Score(1);
-            if(ScoreManager.value >= 5)
+            if(ScoreManager.value >= 5 && achievment1.unlocked == false)
             {
-                UnlockAchievment("0001");
+                UnlockAchievment(achievment1);
             }
+            int chance = Random.Range(1, 5);
+            if (chance == 1)
+            {
+                GameObject powerUp = Instantiate(snowf.powerUpList[Random.Range(0,10)]);
+                powerUp.transform.position = gameObject.transform.position;
+            }
+            
             Destroy(gameObject);
             Destroy(col.gameObject);
+            
+        }
+        
+        if (col.gameObject.tag == "Player")
+        {
+            player.loseHP();
+            if (player.getHP() <= 0)
+            {
+                SceneManager.LoadScene("LostScene");
+            }
+            
         }
     }
     
-    private void UnlockAchievment(string ID)
+    private void UnlockAchievment(AchievmentsObject achievment)
     {
         AchievmentService achServ = FindObjectOfType<AchievmentService>();
         if (achServ)
         {
-            achServ.GetComponent<AchievmentService>().UnlockAchievment(ID);
+            achServ.GetComponent<AchievmentService>().UnlockAchievment(achievment);
         }
     }
 }

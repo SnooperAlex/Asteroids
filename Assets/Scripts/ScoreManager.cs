@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class ScoreManager: MonoBehaviour
 {
+    public Snowflake snowflake;
+    public Snowflakespawner snowflakespawner;
     public static TextMeshProUGUI score;
 
     public static int value = 0;
@@ -20,5 +22,14 @@ public class ScoreManager: MonoBehaviour
     {
         value = value + num;
         score.text = value.ToString();
+    }
+
+    private void Update()
+    {
+        if (value > 30)
+        {
+            snowflake.speed = 15;
+            snowflakespawner.spawnAmount = 2;
+        }
     }
 }

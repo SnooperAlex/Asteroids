@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2353882067108100456}
   - component: {fileID: 2353882067108100462}
   - component: {fileID: 2353882067108100463}
+  - component: {fileID: 4253232707402366242}
   m_Layer: 0
   m_Name: SnowflakeObj
   m_TagString: Untagged
@@ -47,6 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae3837a8c1556904c94e4a520f7da3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1197625558814216506, guid: 70bbd70d36deb694d8c0d38b438818bf, type: 3}
+  achievment1: {fileID: 11400000, guid: 4bb814514eb801346aab4fcc6d07741a, type: 2}
+  text: {fileID: 0}
   snowf: {fileID: 11400000, guid: c797b387ed853dc45b7f379823624339, type: 2}
   sprite: {fileID: 0}
   size: 1
@@ -150,3 +154,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &4253232707402366242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353882067108100459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e92f1d63a3c78439644a3327c4f9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRewinding: 0

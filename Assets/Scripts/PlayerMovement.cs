@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AchievmentsObject achievment2;
     public Bullet bulletPrefab;
     
     public float speed = 10f;
     private float turnSpeed = 2.0f;
+    private int hp = 10;
     Rigidbody2D rb;
 
     void Start()
@@ -19,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
+        }
+
+        if (hp == 10 && ScoreManager.value >= 50 && achievment2.unlocked == false) 
+        {
+            UnlockAchievment(achievment2);
         }
         
     }
@@ -40,6 +47,26 @@ public class PlayerMovement : MonoBehaviour
     {
         Bullet bullet = Instantiate(this.bulletPrefab, this.transform.position, this.transform.rotation);
         bullet.Project(this.transform.up);
+    }
+
+    public void loseHP()
+    {
+        Debug.Log("ouch");
+        hp -= 1;
+    }
+
+    public int getHP()
+    {
+        return hp;
+    }
+    
+    private void UnlockAchievment(AchievmentsObject achievment)
+    {
+        AchievmentService achServ = FindObjectOfType<AchievmentService>();
+        if (achServ)
+        {
+            achServ.GetComponent<AchievmentService>().UnlockAchievment(achievment);
+        }
     }
 
 }

@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d21b9554c876543a70eb12e8e1bbd9, type: 3}
   m_Name: Snowflake_one
   m_EditorClassIdentifier: 
+  powerUpList:
+  - {fileID: 2113572410666623026, guid: b060c57ee2a6f164a89c3be625a81fd4, type: 3}
+  - {fileID: 2113572410666623026, guid: b060c57ee2a6f164a89c3be625a81fd4, type: 3}
+  - {fileID: 2113572410666623026, guid: b060c57ee2a6f164a89c3be625a81fd4, type: 3}
+  - {fileID: 2113572410666623026, guid: b060c57ee2a6f164a89c3be625a81fd4, type: 3}
+  - {fileID: 2113572410666623026, guid: b060c57ee2a6f164a89c3be625a81fd4, type: 3}
+  - {fileID: 3171624834200103941, guid: 1c5e09cc185b03c4eb88c789040a6d18, type: 3}
+  - {fileID: 3171624834200103941, guid: 1c5e09cc185b03c4eb88c789040a6d18, type: 3}
+  - {fileID: 3171624834200103941, guid: 1c5e09cc185b03c4eb88c789040a6d18, type: 3}
+  - {fileID: 3171624834200103941, guid: 1c5e09cc185b03c4eb88c789040a6d18, type: 3}
+  - {fileID: 3171624834200103941, guid: 1c5e09cc185b03c4eb88c789040a6d18, type: 3}
   name: BasicSnowflake
   speed: 10
   artwork: {fileID: 21300000, guid: 6a4de2e84eadeeb41b5a890d27b516a7, type: 3}
